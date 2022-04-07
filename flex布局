@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scalable=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- search模块 -->
+    <div class="search">
+        <div class="search_left"></div>
+        <a class="search_right"></a>
+
+    </div>
+    <div class="ceshi">
+        <div class="ceshia"></div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <span>收集器睡觉哦期间死哦七千</span>
+    <div class="sales">
+        <a href="#" class="sales_right">
+            天天特卖
+        </a>
+    </div>
+</body>
+
+</html>
