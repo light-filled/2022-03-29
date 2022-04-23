@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="手机">
+    <script>
+        //1.获取元素
+        var input = document.querySelector('input');
+        //2.注册事件，
+
+        input.onfocus = function() {
+            //①得到焦点，判断内容是否为默认文字，是就隐藏
+            if (this.value === '手机') {
+                this.value = '';
+            }
+            //获得焦点，文本框文字变黑
+            this.style.color = '#333';
+        }
+
+        input.onblur = function() {
+            // ②失去焦点，判断里面的内容是否为空，是就改为默认文字，
+            if (this.value === '') {
+                this.value = '手机';
+            }
+            //失去焦点，文本框文字变浅
+            this.style.color = '#999';
+
+
+        }
+    </script>
+</body>
+
+</html>
