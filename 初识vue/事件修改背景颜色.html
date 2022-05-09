@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入vue -->
+
+</head>
+
+<body>
+    <div id="app">
+        <p>count的值是{{count}}</p>
+        <!-- vue提供了内置变量$event，它是原生的DOM事件对象e -->
+        <!-- 这里的$event是变量名字是规定死的，但是下面add函数里面e是形参随意写 -->
+        <!-- 1和$event的位置是可以互换的，那么add函数的参数位置也就需要更换 -->
+        <button @click="add(1,$event)">+N</button>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                count: 0
+            },
+            methods: {
+                add(n, e) {
+                    //绑定add处理函数的时候，如果只有add，不传参，那么默认add函数会有一个事件对象e，e是个鼠标事件MouseEvent
+                    //绑定add处理函数的时候，如果是add()，add传参，那么add函数里面的事件对象e就会被覆盖，这时的e就是1，
+                    this.count += 1;
+
+                    //判断this.count的值是否偶数
+                    if (this.count % 2 === 0) {
+                        //偶数
+                        e.target.style.backgroundColor = 'red'; //e.target是事件源（button），是触发的DOM元素
+                    } else {
+                        e.target.style.backgroundColor = '';
+                    }
+
+                }
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>
